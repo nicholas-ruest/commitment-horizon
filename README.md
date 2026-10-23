@@ -15,7 +15,7 @@ Prerequisites: Rust 1.99, Node 22, npm, and Chromium dependencies.
 ./scripts/start-prototype.sh
 ```
 
-Open `http://127.0.0.1:4173`. Stop with `./scripts/stop-prototype.sh`; reset only the synthetic namespace with `rm -rf data/prototype`. The one-command verification is `./scripts/verify-prototype.sh`.
+Open `http://127.0.0.1:14173`. Stop with `./scripts/stop-prototype.sh`; reset only the synthetic namespace with `rm -rf data/prototype`. The one-command verification is `./scripts/verify-prototype.sh`.
 
 ## Product journeys
 
