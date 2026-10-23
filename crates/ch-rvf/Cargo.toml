@@ -1,0 +1,16 @@
+[package]
+    name = "ch-rvf"
+    version.workspace = true
+    edition.workspace = true
+    license.workspace = true
+    rust-version.workspace = true
+
+    [dependencies]
+    ch-errors = { path = "../ch-errors" }
+rvf-runtime = { workspace = true }
+
+    [dev-dependencies]
+tempfile = { workspace = true }
+
+[lints]
+    workspace = true

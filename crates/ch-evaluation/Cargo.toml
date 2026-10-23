@@ -1,0 +1,15 @@
+[package]
+name = "ch-evaluation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ch-calibration = { path = "../ch-calibration" }
+ch-eprocess = { path = "../ch-eprocess" }
+ch-forecast = { path = "../ch-forecast" }
+ch-errors = { path = "../ch-errors" }
+
+[lints]
+workspace = true

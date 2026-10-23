@@ -1,0 +1,11 @@
+[advisories]
+version = 2
+ignore = ["RUSTSEC-2025-0141"] # accepted: transitive RuVector bincode unmaintained notice; no safe upgrade, tracked as prototype limitation
+[licenses]
+version = 2
+allow = ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Unicode-3.0", "MIT-0", "Zlib"]
+[bans]
+multiple-versions = "warn"
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

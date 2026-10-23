@@ -1,0 +1,13 @@
+[package]
+name = "ch-seed"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ch-evidence = { path = "../ch-evidence" }
+ch-types = { path = "../ch-types" }
+
+[lints]
+workspace = true
