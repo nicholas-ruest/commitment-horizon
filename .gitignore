@@ -1,0 +1,13 @@
+/target/
+/data/
+/frontend/node_modules/
+/frontend/dist/
+/frontend/playwright-report/
+/frontend/test-results/
+*.rvf
+.env
+/.run/
+/frontend/tsconfig.tsbuildinfo
+/evidence/prototype/test-results/
+/evidence/prototype/playwright-report/
+/evidence/prototype/*.log

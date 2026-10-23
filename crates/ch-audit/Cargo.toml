@@ -1,0 +1,17 @@
+[package]
+    name = "ch-audit"
+    version.workspace = true
+    edition.workspace = true
+    license.workspace = true
+    rust-version.workspace = true
+
+    [dependencies]
+    ch-errors = { path = "../ch-errors" }
+ch-types = { path = "../ch-types" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+
+    [lints]
+    workspace = true

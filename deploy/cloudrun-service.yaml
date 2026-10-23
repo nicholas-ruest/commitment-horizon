@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata: {name: commitment-horizon-api}
+spec:
+  template:
+    metadata: {annotations: {autoscaling.knative.dev/maxScale: '10'}}
+    spec:
+      serviceAccountName: commitment-horizon-runtime
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT/commitment-horizon/api:SOURCE_SHA
+          ports: [{containerPort: 8080}]
+          env:
+            - {name: HORIZON_BIND, value: '0.0.0.0:8080'}
+            - {name: HORIZON_DATA_ROOT, value: '/tmp/data'}
+            - {name: HORIZON_NAMESPACE, value: 'cloud-run'}

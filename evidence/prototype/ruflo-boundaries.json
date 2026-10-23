@@ -1,0 +1,21 @@
+
+{
+  "boundaries": [
+    {
+      "cutValue": 0,
+      "partition1": [],
+      "partition2": [],
+      "cutEdges": [],
+      "suggestion": "Found 0 and 0 file groups with minimal coupling. Consider organizing into separate modules."
+    }
+  ],
+  "statistics": {
+    "nodeCount": 0,
+    "edgeCount": 0,
+    "avgDegree": 0,
+    "maxDegree": 0,
+    "density": 0,
+    "componentCount": 0
+  },
+  "circularDependencies": []
+}

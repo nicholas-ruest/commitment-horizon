@@ -1,0 +1,258 @@
+{
+  "workspace_member_count": 24,
+  "package_count": 24,
+  "packages": [
+    {
+      "name": "ch-api",
+      "targets": [
+        "lib",
+        "bin"
+      ],
+      "path_dependencies": [
+        "ch-auth",
+        "ch-config",
+        "ch-errors",
+        "ch-evidence",
+        "ch-middleware",
+        "ch-orchestrator",
+        "ch-repository"
+      ]
+    },
+    {
+      "name": "ch-auth",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-errors",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "name": "ch-config",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-evidence",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-types",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-middleware",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-orchestrator",
+      "targets": [
+        "lib",
+        "test"
+      ],
+      "path_dependencies": [
+        "ch-audit",
+        "ch-calibration",
+        "ch-commitment",
+        "ch-embedding",
+        "ch-eprocess",
+        "ch-errors",
+        "ch-evidence",
+        "ch-forecast",
+        "ch-policy",
+        "ch-recall",
+        "ch-repository",
+        "ch-risk",
+        "ch-ruvector",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-audit",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-calibration",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-commitment",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-embedding",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-eprocess",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-forecast",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-policy",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors",
+        "ch-regorus"
+      ]
+    },
+    {
+      "name": "ch-regorus",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-recall",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors",
+        "ch-ruvector",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-ruvector",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-embedding",
+        "ch-errors",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-repository",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors",
+        "ch-rvf",
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-rvf",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-errors"
+      ]
+    },
+    {
+      "name": "ch-risk",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-types"
+      ]
+    },
+    {
+      "name": "ch-cli",
+      "targets": [
+        "bin"
+      ],
+      "path_dependencies": [
+        "ch-config",
+        "ch-errors",
+        "ch-evaluation",
+        "ch-seed"
+      ]
+    },
+    {
+      "name": "ch-evaluation",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-calibration",
+        "ch-eprocess",
+        "ch-errors",
+        "ch-forecast"
+      ]
+    },
+    {
+      "name": "ch-seed",
+      "targets": [
+        "lib"
+      ],
+      "path_dependencies": [
+        "ch-evidence",
+        "ch-types"
+      ]
+    }
+  ]
+}

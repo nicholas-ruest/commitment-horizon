@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    environment: {HORIZON_BIND: 0.0.0.0:8080, HORIZON_DATA_ROOT: /data, HORIZON_NAMESPACE: compose, HORIZON_DEV_TOKEN: local-operator}
+    volumes: [horizon-data:/data]
+    ports: ["8080:8080"]
+  web:
+    build: ./frontend
+    ports: ["4173:80"]
+    depends_on: [api]
+volumes: {horizon-data: {}}

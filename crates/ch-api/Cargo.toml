@@ -1,0 +1,27 @@
+[package]
+name = "ch-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+[dependencies]
+ch-auth = { path = "../ch-auth" }
+ch-config = { path = "../ch-config" }
+ch-errors = { path = "../ch-errors" }
+ch-evidence = { path = "../ch-evidence" }
+ch-middleware = { path = "../ch-middleware" }
+ch-orchestrator = { path = "../ch-orchestrator" }
+ch-repository = { path = "../ch-repository" }
+axum = { workspace = true }
+tokio = { workspace = true }
+tower-http = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde = { workspace = true }
+[lib]
+path = "src/lib.rs"
+[[bin]]
+name = "commitment-horizon-api"
+path = "src/main.rs"
+[lints]
+workspace = true

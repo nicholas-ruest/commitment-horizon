@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "observation": "derived from the durable RVF audit readback produced by the executed browser acceptance journey",
+  "journey": "register-and-evaluate",
+  "browser_route": "/",
+  "api_route": "POST /api/v1/commitments",
+  "correlation_id": "browser-e5c9322e-573e-45bc-9062-af11231254f9",
+  "commitment_id": "payments-1792720709229",
+  "durable_event": "commitment.registered",
+  "receipt": "40fe67055df9a07e0c726a742e8ab8e8795fc1890a4388237beca5ccc680a166",
+  "payload_hash": "2138bbacb3befe10a49fda21012df7e72a2fa96793cc0dce755b62dccc5b0dfb",
+  "synthetic": true
+}

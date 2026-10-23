@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "project": "commitment-horizon",
+  "tested_source_sha": "f58811adf6b8f32749d08835d8363f998fa9ffe8",
+  "tested_at": "2026-10-23T02:04:00Z",
+  "launch_mode": "governed ruOS executor; native Axum and Vite processes",
+  "test_namespace": "prototype",
+  "urls": {
+    "frontend": "http://127.0.0.1:14173",
+    "api": "http://127.0.0.1:18080"
+  },
+  "dependencies": {
+    "rust": "1.99.0",
+    "node": "22",
+    "ruvector_core": "2.4.0 @ 46d816ddc4c2a8a06cd3613534a79b1d557d858b",
+    "rvf_runtime": "0.3.2 @ 46d816ddc4c2a8a06cd3613534a79b1d557d858b",
+    "regorus": "0.13.0 @ 9d19b6a578d22d6a223c48ba37e632d7d74ee0db"
+  },
+  "commands": [
+    {"command": "cargo fmt --check", "exit_code": 0},
+    {"command": "cargo clippy --locked --all-targets --all-features -- -D warnings", "exit_code": 0},
+    {"command": "cargo test --locked --workspace", "exit_code": 0},
+    {"command": "cargo deny check", "exit_code": 0},
+    {"command": "npm --prefix frontend run typecheck", "exit_code": 0},
+    {"command": "npm --prefix frontend run lint", "exit_code": 0, "note": "one non-failing exhaustive-deps advisory"},
+    {"command": "npm --prefix frontend test", "exit_code": 0},
+    {"command": "npm --prefix frontend run contract", "exit_code": 0},
+    {"command": "npm --prefix frontend run build", "exit_code": 0},
+    {"command": "npm --prefix frontend run e2e", "exit_code": 0, "result": "3/3 journeys passed against live first-party API"},
+    {"command": "scripts/verify-prototype.sh", "exit_code": 0}
+  ],
+  "artifacts": [
+    {"path": "docs/assets/desktop-evaluation.png", "sha256": "d7cea6680fc0d9c56803143ffb658496be17bb49c899ef54566f104daa90ec3a"},
+    {"path": "docs/assets/mobile-audit.png", "sha256": "1f80755e27545ccd3c69298939435a16a01dac8468f5db2ab2888573f7dd223f"},
+    {"path": "evidence/prototype/restart-before.json", "sha256": "e07b8fded590d2d4643e95f1662ed3d0d8ec72050c971d46760214c56d4346a5"},
+    {"path": "evidence/prototype/restart-after.json", "sha256": "e07b8fded590d2d4643e95f1662ed3d0d8ec72050c971d46760214c56d4346a5"},
+    {"path": "evidence/prototype/benchmark.json", "sha256": "f247881c530b2299101fdcc74d829df8f832a079b9f88311f0d0e1b9206314db"},
+    {"path": "evidence/prototype/ablation.txt", "sha256": "db1f574d423d11dd8339f1547843489afaa901d8e5e97fe27b945b0fcfdaf8c0"},
+    {"path": "evidence/prototype/correlation-trace.json", "sha256": "9dcfcf6fb567333379ec955a8d1a16b0a16ba2df744d7a79e62a667d99ea724e"},
+    {"path": "evidence/prototype/structural-checker.txt", "sha256": "6d5221d9589bb1894cc926f9809948ff1333a462b0b156053eda265f6f437588"},
+    {"path": "evidence/prototype/workspace-audit.json", "sha256": "d2ed5432853d78ff1bc68c61f82a7cbd51a30c42d51822cbd9d3fa4aa74c0ade"},
+    {"path": "frontend/playwright-report", "retention": "GitHub Actions artifact"},
+    {"path": "evidence/prototype/test-results", "retention": "GitHub Actions artifact"}
+  ],
+  "external_gaps": [
+    "Docker is unavailable on the local executor; the CI workflow performs docker compose build.",
+    "No cloud deployment or production promotion was authorized.",
+    "MetaHarness, Darwin, and Flywheel executables were not exposed on the executor."
+  ]
+}

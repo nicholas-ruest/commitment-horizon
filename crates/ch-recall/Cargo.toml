@@ -1,0 +1,14 @@
+[package]
+name = "ch-recall"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ch-errors = { path = "../ch-errors" }
+ch-ruvector = { path = "../ch-ruvector" }
+ch-types = { path = "../ch-types" }
+
+[lints]
+workspace = true

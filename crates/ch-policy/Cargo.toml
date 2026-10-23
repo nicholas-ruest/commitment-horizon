@@ -1,0 +1,13 @@
+[package]
+name = "ch-policy"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ch-errors = { path = "../ch-errors" }
+ch-regorus = { path = "../ch-regorus" }
+
+[lints]
+workspace = true

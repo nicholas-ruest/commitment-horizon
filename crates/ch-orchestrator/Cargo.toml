@@ -1,0 +1,26 @@
+[package]
+name = "ch-orchestrator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+[dependencies]
+ch-audit = { path = "../ch-audit" }
+ch-calibration = { path = "../ch-calibration" }
+ch-commitment = { path = "../ch-commitment" }
+ch-embedding = { path = "../ch-embedding" }
+ch-eprocess = { path = "../ch-eprocess" }
+ch-errors = { path = "../ch-errors" }
+ch-evidence = { path = "../ch-evidence" }
+ch-forecast = { path = "../ch-forecast" }
+ch-policy = { path = "../ch-policy" }
+ch-recall = { path = "../ch-recall" }
+ch-repository = { path = "../ch-repository" }
+ch-risk = { path = "../ch-risk" }
+ch-ruvector = { path = "../ch-ruvector" }
+ch-types = { path = "../ch-types" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[lints]
+workspace = true

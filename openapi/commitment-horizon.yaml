@@ -1,0 +1,22 @@
+openapi: 3.1.0
+info: {title: Commitment Horizon API, version: 0.1.0}
+servers: [{url: http://127.0.0.1:8080/api/v1}]
+security: [{bearerAuth: []}]
+paths:
+  /commitments:
+    get: {operationId: listCommitments, responses: {'200': {description: Commitments}}}
+    post:
+      operationId: registerCommitment
+      parameters: [{in: header, name: idempotency-key, required: true, schema: {type: string}}]
+      responses: {'201': {description: Registered}, '400': {description: Validation problem}, '409': {description: Conflict}}
+  /commitments/{id}:
+    get: {operationId: getCommitment, parameters: [{$ref: '#/components/parameters/Id'}], responses: {'200': {description: Commitment}, '404': {description: Not found}}}
+  /commitments/{id}/evaluate:
+    post: {operationId: evaluateCommitment, parameters: [{$ref: '#/components/parameters/Id'}], responses: {'201': {description: Evaluation}}}
+  /commitments/{id}/exceptions:
+    post: {operationId: requestException, parameters: [{$ref: '#/components/parameters/Id'}], responses: {'201': {description: Approved}, '403': {description: Policy denial}}}
+  /commitments/{id}/audit:
+    get: {operationId: readAudit, parameters: [{$ref: '#/components/parameters/Id'}], responses: {'200': {description: Durable audit}}}
+components:
+  parameters: {Id: {in: path, name: id, required: true, schema: {type: string, pattern: '^[A-Za-z0-9-]{1,64}$'}}}
+  securitySchemes: {bearerAuth: {type: http, scheme: bearer}}
